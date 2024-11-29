@@ -1,0 +1,133 @@
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #343a40;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.form-control {
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.form-select {
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.table {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+}
+
+.table td {
+  text-align: center;
+}
+
+.list-group-item {
+  font-size: 1rem;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+}
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.list-group {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}

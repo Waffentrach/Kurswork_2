@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-
+import '../styles/ReportsView.css';
 const ReportsView = () => {
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');

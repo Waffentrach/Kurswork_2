@@ -1,0 +1,26 @@
+/* Заголовок сторінки */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Форма для вибору дати */
+.report-form {
+    padding: 20px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #7da8d6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

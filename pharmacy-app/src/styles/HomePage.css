@@ -1,4 +1,4 @@
-/* Заголовок сторінки */
+
 h1 {
     font-size: 2rem;
     text-align: center;
@@ -6,12 +6,10 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Стиль для контейнера */
 .container {
     margin-top: 20px;
 }
 
-/* Форма і таблиця продажів */
 .card {
     padding: 20px;
     border-radius: 8px;

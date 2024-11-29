@@ -8,14 +8,16 @@ import './App.css';
 
 const App = () => {
     return (
-        <Router>
-            <NavBar />
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/medicines" element={<MedicinesPage />} />
-                <Route path="/reports" element={<ReportsPage />} />
-            </Routes>
-        </Router>
+        <div className="app">
+            <Router>
+                <NavBar />
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/medicines" element={<MedicinesPage />} />
+                    <Route path="/reports" element={<ReportsPage />} />
+                </Routes>
+            </Router>
+        </div>
     );
 };
 

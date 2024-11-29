@@ -1,0 +1,21 @@
+/* Стиль навігації */
+.navbar {
+    background-color: #343a40;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    text-decoration: underline;
+}

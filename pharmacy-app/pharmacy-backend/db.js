@@ -12,7 +12,11 @@ const Medicine = sequelize.define("Medicine", {
 });
 
 const Receipt = sequelize.define("Receipt", {
-  number: { type: DataTypes.STRING, allowNull: false },
+  number: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    defaultValue: () => `R-${Date.now()}`, // Генерація унікального значення
+  },
   date: { type: DataTypes.DATE, allowNull: false },
   total: { type: DataTypes.FLOAT, allowNull: false },
 });

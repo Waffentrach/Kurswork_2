@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getMedicines } from '../api/medicines';
-import axios from 'axios';
-
+import { createReceipt } from '../api/receipts';
+import '../styles/ReceiptForm.css';
 const ReceiptForm = () => {
     const [medicines, setMedicines] = useState([]);
     const [selectedItems, setSelectedItems] = useState([]);
@@ -28,7 +28,7 @@ const ReceiptForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/receipts', {
+            await createReceipt({
                 items: selectedItems,
                 total,
             });
@@ -41,12 +41,12 @@ const ReceiptForm = () => {
     };
 
     return (
-        <div className="card p-4">
-            <h4 className="text-center mb-4">Створення чека</h4>
+        <div>
+            <h4>Створення чека</h4>
             <form onSubmit={handleSubmit}>
-                <div className="mb-3">
+                <div>
                     <label>Ліки:</label>
-                    <select id="medicine-select" className="form-select">
+                    <select id="medicine-select">
                         {medicines.map((medicine) => (
                             <option key={medicine.id} value={medicine.id}>
                                 {medicine.name} (₴{medicine.price})
@@ -54,7 +54,7 @@ const ReceiptForm = () => {
                         ))}
                     </select>
                 </div>
-                <div className="mb-3">
+                <div>
                     <label>Кількість:</label>
                     <input
                         type="number"
@@ -62,12 +62,10 @@ const ReceiptForm = () => {
                         placeholder="Кількість"
                         min="1"
                         required
-                        className="form-control"
                     />
                 </div>
                 <button
                     type="button"
-                    className="btn btn-primary mb-3"
                     onClick={() =>
                         handleAddItem(
                             parseInt(document.getElementById('medicine-select').value, 10),
@@ -78,17 +76,15 @@ const ReceiptForm = () => {
                     Додати
                 </button>
                 <h5>Обрані ліки:</h5>
-                <ul className="list-group mb-3">
+                <ul>
                     {selectedItems.map((item, index) => (
-                        <li key={index} className="list-group-item">
+                        <li key={index}>
                             {item.name} - {item.quantity} шт. (₴{item.price * item.quantity})
                         </li>
                     ))}
                 </ul>
                 <h5>Загальна сума: ₴{total}</h5>
-                <button type="submit" className="btn btn-success w-100">
-                    Створити чек
-                </button>
+                <button type="submit">Створити чек</button>
             </form>
         </div>
     );
